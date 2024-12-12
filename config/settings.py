@@ -29,6 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TIME_ZONE = 'America/Sao_Paulo'
+USE_TZ = True
 
 # Application definition
 
