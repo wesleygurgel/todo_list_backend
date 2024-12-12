@@ -1,0 +1,31 @@
+# Django-specific
+.DS_Store
+*.sqlite3
+db.sqlite3
+local.py
+env/
+venv/
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info
+.pytest_cache/
+.tox/
+.coverage
+.ropeproject
+*.swp
+
+# DRF-specific
+media/
+static/
+*.log
+
+# IDE-specific
+.idea/
+.vscode/
+
+# Other
+*.pem
+*.key
+.env
+requirements.txt.lock
