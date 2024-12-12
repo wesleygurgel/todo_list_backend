@@ -1,12 +1,12 @@
-from django.db.models.signals import pre_migrate
+from django.db.models.signals import post_migrate
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 
 
-@receiver(pre_migrate)
+@receiver(post_migrate)
 def create_default_user(sender, **kwargs):
     """Cria um usuário padrão antes de carregar as fixtures."""
-    if not User.objects.filter(username='default_user').exists():
+    if not User.objects.filter(username='admin').exists():
         User.objects.create_user(
             username='admin',
             password='admin',
