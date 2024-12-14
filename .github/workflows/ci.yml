@@ -60,7 +60,7 @@ jobs:
                   POSTGRES_DB: testdb
                   POSTGRES_USER: testuser
                   POSTGRES_PASSWORD: testpassword
-                  POSTGRES_HOST: postgres
+                  POSTGRES_HOST: 127.0.0.1
                   POSTGRES_PORT: 5432
                   DJANGO_SETTINGS_MODULE: config.settings
                   SECRET_KEY: testsecretkey
@@ -73,7 +73,7 @@ jobs:
                   POSTGRES_DB: testdb
                   POSTGRES_USER: testuser
                   POSTGRES_PASSWORD: testpassword
-                  POSTGRES_HOST: postgres
+                  POSTGRES_HOST: 127.0.0.1
                   POSTGRES_PORT: 5432
                   DJANGO_SETTINGS_MODULE: config.settings
                   SECRET_KEY: testsecretkey
