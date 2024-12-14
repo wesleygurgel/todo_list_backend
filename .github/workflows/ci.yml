@@ -71,6 +71,7 @@ jobs:
                   POSTGRES_DB: testdb
                   POSTGRES_USER: testuser
                   POSTGRES_PASSWORD: testpassword
+                  POSTGRES_HOST: postgres
                   DJANGO_SETTINGS_MODULE: config.settings
                   SECRET_KEY: testsecretkey
               run: |
