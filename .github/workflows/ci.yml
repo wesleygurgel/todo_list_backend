@@ -55,21 +55,24 @@ jobs:
                   pip install --upgrade pip
                   pip install -r requirements.txt
 
-            - name: Set environment variables
+            - name: Run migrations
               env:
                   POSTGRES_DB: testdb
                   POSTGRES_USER: testuser
                   POSTGRES_PASSWORD: testpassword
                   DJANGO_SETTINGS_MODULE: config.settings.test
                   SECRET_KEY: testsecretkey
-              run: echo "Environment variables set"
-
-            - name: Run migrations
               run: |
                   source venv/bin/activate
                   python manage.py migrate
 
             - name: Run tests
+              env:
+                  POSTGRES_DB: testdb
+                  POSTGRES_USER: testuser
+                  POSTGRES_PASSWORD: testpassword
+                  DJANGO_SETTINGS_MODULE: config.settings
+                  SECRET_KEY: testsecretkey
               run: |
                   source venv/bin/activate
                   python manage.py test
