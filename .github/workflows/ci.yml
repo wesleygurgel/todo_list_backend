@@ -86,15 +86,3 @@ jobs:
                   source venv/bin/activate
                   pip install flake8
                   flake8 . || true
-
-            # - name: Check code formatting (Black)
-            #   run: |
-            #       source venv/bin/activate
-            #       pip install black
-            #       black --check .
-
-            # - name: Check imports formatting (isort)
-            #   run: |
-            #       source venv/bin/activate
-            #       pip install isort
-            #       isort --check-only .
